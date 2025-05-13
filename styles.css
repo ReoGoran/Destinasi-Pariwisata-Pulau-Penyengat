@@ -881,21 +881,6 @@
         }
         
         @media (max-width: 768px) {
-        .nav-links.show,
-        .nav-buttons.show {
-            display: flex !important;
-            flex-direction: column;
-            gap: 15px;
-            background-color: white;
-            padding: 20px;
-            position: absolute;
-            top: 70px; /* di bawah header */
-            left: 0;
-            right: 0;
-            z-index: 999;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            }
-
             .top-bar .container {
                 flex-direction: column;
                 gap: 10px;
@@ -949,4 +934,31 @@
         }
         html {
             scroll-behavior: smooth;
-          }          
+            }
+        
+        .nav-links.show {
+            display: flex !important;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            position: absolute;
+            top: 80px; /* di bawah header */
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-buttons.show {
+            display: flex !important;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+            padding: 0 20px 20px;
+            position: absolute;
+            top: 220px; /* di bawah nav-links */
+            left: 0;
+            right: 0;
+            z-index: 998;
+        }
