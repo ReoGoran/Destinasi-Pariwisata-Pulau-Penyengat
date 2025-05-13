@@ -881,6 +881,21 @@
         }
         
         @media (max-width: 768px) {
+        .nav-links.show,
+        .nav-buttons.show {
+            display: flex !important;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            position: absolute;
+            top: 70px; /* di bawah header */
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
             .top-bar .container {
                 flex-direction: column;
                 gap: 10px;
