@@ -8,18 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -29,12 +17,12 @@
                     Penyengat<span>Island</span>
                 </a>
                 <div class="nav-links">
-                    <a href="#" class="active">Beranda</a>
-                    <a href="#">Destinasi</a>
-                    <a href="#">Paket Wisata</a>
-                    <a href="#">Akomodasi</a>
-                    <a href="#">Galeri</a>
-                    <a href="#">Kontak</a>
+                    <a href="#beranda" class="active">Beranda</a>
+                    <a href="#destinasi">Destinasi</a>
+                    <a href="#paket">Paket Wisata</a>
+                    <a href="#testimonial">Testimonial</a>
+                    <a href="#galeri">Galeri</a>
+                    <a href="#kontak">Kontak</a>
                 </div>
                 <div class="nav-buttons">
                     <a href="#" class="btn btn-primary">Pesan Sekarang</a>
@@ -47,7 +35,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="beranda">
         <div class="container">
             <div class="hero-content">
                 <h1>Jelajahi Keindahan Pulau Penyengat</h1>
@@ -90,7 +78,7 @@
     </div>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="destinasi">
         <div class="container">
             <h2 class="section-title">Tentang Pulau Penyengat</h2>
             <p class="section-subtitle">Pulau kecil nan eksotis yang menyimpan banyak cerita sejarah dan budaya Melayu</p>
@@ -225,7 +213,7 @@
         </div>
     </section>
 
-    <section class="packages">
+    <section class="packages" id="paket">
         <div class="container">
             <h2 class="section-title">Paket Wisata</h2>
             <p class="section-subtitle">Pilih paket wisata terbaik untuk menjelajahi Pulau Penyengat</p>
@@ -288,7 +276,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonial">
         <div class="container">
             <h2 class="section-title">Apa Kata Pengunjung?</h2>
             <p class="section-subtitle">Pengalaman nyata dari para wisatawan yang telah mengunjungi Pulau Penyengat</p>
@@ -298,10 +286,10 @@
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmad Fauzi">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Renda Kurnia Manik">
                         </div>
                         <div class="testimonial-user">
-                            <h4>Ahmad Fauzi</h4>
+                            <h4>Renda Kurnia Manik</h4>
                             <p>Jakarta</p>
                         </div>
                     </div>
@@ -364,7 +352,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery">
+    <section class="gallery" id="galeri">
         <div class="container">
             <h2 class="section-title">Galeri Foto</h2>
             <p class="section-subtitle">Kumpulan momen indah dari Pulau Penyengat</p>
@@ -436,7 +424,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="kontak">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -458,10 +446,10 @@
                 <div class="footer-column">
                     <h3>Tautan Cepat</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#beranda">Beranda</a></li>
                         <li><a href="#">Tentang Pulau Penyengat</a></li>
-                        <li><a href="#">Paket Wisata</a></li>
-                        <li><a href="#">Galeri Foto</a></li>
+                        <li><a href="#paket">Paket Wisata</a></li>
+                        <li><a href="#galeri">Galeri Foto</a></li>
                         <li><a href="#">Blog Perjalanan</a></li>
                         <li><a href="#">Kebijakan Privasi</a></li>
                     </ul>
