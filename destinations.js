@@ -1,4 +1,3 @@
-// Data destinasi (bisa dipindahkan ke file JSON terpisah)
 const destinationData = {
     'masjid-sultan': {
         title: 'Masjid Sultan Riau',
@@ -17,7 +16,7 @@ const destinationData = {
             Keterlibatan berbagai etnis mencerminkan keragaman dan keterbukaan budaya di masa Kesultanan Riau.
         `,
         gallery: [
-            'img/Destinasi masjid sultan riau1.jpeg',
+            'img/Destinasi Masjid sultan riau1.jpeg',
             'img/Destinasi masjid sultan riau2.jpg',
             'img/Destinasi masjid sultan riau3.jpg'
         ],
