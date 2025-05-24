@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Akun - Penyengat Island</title>
+  <link rel="stylesheet" href="register.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="register-container">
+    <form class="register-form" onsubmit="return handleRegister(event)">
+      <h2>Buat Akun Baru</h2>
+      
+      <div class="form-group">
+        <label for="fullname"><i class="fas fa-user"></i> Nama Lengkap</label>
+        <input type="text" id="fullname" required placeholder="Masukkan nama lengkap">
+      </div>
+      
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" id="email" required placeholder="Masukkan email aktif">
+      </div>
+      
+      <div class="form-group">
+        <label for="username"><i class="fas fa-user-tag"></i> Username</label>
+        <input type="text" id="username" required placeholder="Masukkan username">
+      </div>
+      
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Kata Sandi</label>
+        <input type="password" id="password" required placeholder="Buat kata sandi">
+      </div>
+      
+      <div class="form-group">
+        <label for="confirm"><i class="fas fa-lock"></i> Konfirmasi Sandi</label>
+        <input type="password" id="confirm" required placeholder="Ulangi kata sandi">
+      </div>
+
+      <div class="form-options">
+        <label><input type="checkbox" id="terms" required> Saya setuju dengan <a href="#">syarat & ketentuan</a></label>
+      </div>
+
+      <p class="error-message" id="error-msg" style="display: none;"></p>
+
+      <button type="submit" class="btn-register">Daftar</button>
+
+      <p class="login-link">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+    </form>
+  </div>
+
+  <script>
+    function handleRegister(e) {
+      e.preventDefault();
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+      const error = document.getElementById('error-msg');
+      if (pass !== confirm) {
+        error.textContent = "Kata sandi tidak cocok.";
+        error.style.display = "block";
+        return false;
+      }
+      error.style.display = "none";
+      alert("Akun berhasil dibuat!");
+      window.location.href = "login.html";
+      return true;
+    }
+  </script>
+</body>
+</html>

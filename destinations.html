@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinasi Wisata - Pulau Penyengat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="destinations.css">
+    <!-- Leaflet CSS untuk peta -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Penyengat<span>Island</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="#" class="active">Destinasi</a>
+                    <a href="index.html#testimonial">Testimonial</a>
+                    <a href="index.html#galeri">Galeri</a>
+                    <a href="index.html#kontak">Kontak</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="login/login.html" class="btn-login">Login</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="destination-hero">
+        <div class="container">
+            <h1>Destinasi Wisata Pulau Penyengat</h1>
+            <p>Jelajahi keindahan dan sejarah di setiap sudut Pulau Penyengat</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>Kategori:</label>
+                    <select id="category-filter">
+                        <option value="all">Semua</option>
+                        <option value="sejarah">Sejarah</option>
+                        <option value="religi">Religi</option>
+                        <option value="budaya">Budaya</option>
+                        <option value="alam">Alam</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Cari destinasi...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-grid">
+        <div class="container">
+            <!-- Masjid Sultan Riau -->
+            <div class="destination-card" data-category="religi sejarah">
+                <div class="destination-layout">
+                    <div class="destination-image">
+                        <img src="img/masjid sultan riau.jpg" alt="Masjid Sultan Riau">
+                        <div class="destination-category">
+                            <span>Religi</span>
+                            <span>Sejarah</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Masjid Sultan Riau</h3>
+                        <p class="destination-description">
+                            Masjid bersejarah yang dibangun pada tahun 1832-1844 M dengan keunikan konstruksi tanpa paku. Masjid ini merupakan salah satu warisan sejarah terpenting di Pulau Penyengat yang menunjukkan kejayaan Kesultanan Riau-Lingga pada masanya.
+                        </p>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> Buka: 08.00 - 17.00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Pusat Pulau</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="showDestinationDetail('masjid-sultan')">
+                        Lihat Detail
+                    </a>
+                </div>
+            </div>
+
+            <!-- Benteng Bukit Kursi -->
+            <div class="destination-card" data-category="sejarah">
+                <div class="destination-layout">
+                    <div class="destination-image">
+                        <img src="img/benteng bukit kursi.jpg" alt="Benteng Bukit Kursi">
+                        <div class="destination-category">
+                            <span>Sejarah</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Benteng Bukit Kursi</h3>
+                        <p class="destination-description">
+                            Benteng pertahanan peninggalan Kerajaan Riau-Lingga dengan pemandangan spektakuler. Dari puncak benteng, pengunjung dapat menikmati pemandangan Kota Tanjung Pinang dan perairan sekitarnya.
+                        </p>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> Buka: 24 Jam</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Bukit Kursi</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="showDestinationDetail('benteng-kursi')">
+                        Lihat Detail
+                    </a>
+                </div>
+            </div>
+
+            <!-- Makam Raja Ali Haji -->
+            <div class="destination-card" data-category="sejarah budaya">
+                <div class="destination-layout">
+                    <div class="destination-image">
+                        <img src="img/makam raja ali haji.jpg" alt="Makam Raja Ali Haji">
+                        <div class="destination-category">
+                            <span>Sejarah</span>
+                            <span>Budaya</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Makam Raja Ali Haji</h3>
+                        <p class="destination-description">
+                            Lokasi peristirahatan terakhir pujangga besar Melayu, penulis Gurindam Dua Belas. Kompleks makam ini menjadi saksi bisu kejayaan sastra Melayu dan peradaban Islam di Kepulauan Riau.
+                        </p>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> Buka: 08.00 - 17.00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Kompleks Makam</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="showDestinationDetail('makam-raja')">
+                        Lihat Detail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Detail Modal -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="destination-detail">
+                <div class="detail-header">
+                    <h2>Detail Destinasi</h2>
+                </div>
+                <div class="detail-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                <div class="detail-gallery">
+                    <h3>Galeri Foto</h3>
+                    <div class="gallery-grid">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="detail-map">
+                    <h3>Lokasi</h3>
+                    <div id="map"></div>
+                </div>
+                <div class="detail-tips">
+                    <h3>Tips Berkunjung</h3>
+                    <ul>
+                        <!-- Tips will be loaded dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <i class="fas fa-map-marked-alt"></i>
+              PenyengatIsland
+            </div>
+            <p class="footer-about">
+              Portal wisata resmi Pulau Penyengat, destinasi warisan budaya
+              Melayu di Kepulauan Riau.
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Tautan Cepat</h3>
+            <ul class="footer-links">
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#">Tentang Pulau Penyengat</a></li>
+              <li><a href="#galeri">Galeri Foto</a></li>
+              <li><a href="#">Blog Perjalanan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Kontak Kami</h3>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >Jl. Dermaga Penyengat, Tanjung Pinang, Kepulauan Riau,
+                  Indonesia</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+62 812 3456 7890</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@pulaupenyengat.com</span>
+              </li>
+              <li>
+                <i class="fab fa-whatsapp"></i>
+                <span>+62 812 3456 7890 (WhatsApp)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Jam Operasional</h3>
+            <ul class="footer-links">
+              <li>Senin - Jumat: 08:00 - 17:00</li>
+              <li>Sabtu: 09:00 - 15:00</li>
+              <li>Minggu: Libur</li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="margin-top: 20px; display: inline-block"
+              >Hubungi Kami</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 PulauPenyengat.com - Seluruh hak cipta dilindungi.
+            Dikembangkan oleh Dinas Pariwisata Kepulauan Riau.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="destinations.js"></script>
+</body>
+</html>
