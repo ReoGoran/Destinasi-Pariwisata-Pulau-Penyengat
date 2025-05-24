@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Penyengat Island</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" onsubmit="return validateLogin(event)">
+            <h2>Masuk ke Penyengat Island</h2>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email / Username</label>
+                <input type="text" id="email" placeholder="Masukkan email atau username" required>
+            </div>
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Kata Sandi</label>
+                <input type="password" id="password" placeholder="Masukkan kata sandi" required>
+            </div>
+            <div class="form-options">
+                <label><input type="checkbox"> Ingat saya</label>
+                <a href="#">Lupa Password?</a>
+            </div>
+            <p class="error-message" id="error-msg" style="display: none;">Email atau password salah.</p>
+            <button type="submit" class="btn-login">Masuk</button>
+            <p class="signup-link">Belum punya akun? <a href="register.html">Daftar sekarang</a></p>
+        </form>
+    </div>
+    <script>
+        function validateLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            if (email === '' || password === '') {
+                errorMsg.textContent = 'Semua kolom wajib diisi.';
+                errorMsg.style.display = 'block';
+                return false;
+            }
+            errorMsg.style.display = 'none';
+            window.location.href = '../index.html';
+            return true;
+        }
+    </script>
+</body>
+</html>
