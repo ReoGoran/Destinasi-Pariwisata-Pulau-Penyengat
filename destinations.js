@@ -1,3 +1,4 @@
+// Data destinasi (bisa dipindahkan ke file JSON terpisah)
 const destinationData = {
     'masjid-sultan': {
         title: 'Masjid Sultan Riau',
